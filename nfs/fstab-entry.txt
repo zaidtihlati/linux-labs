@@ -1,0 +1,10 @@
+# /etc/fstab — NFS Auto-mount Entries
+# Add these lines to your existing /etc/fstab file
+# Format: <server>:<remote_path> <local_mount_point> <type> <options> <dump> <pass>
+ 
+localhost:/nfs/etudiant/public  /home/etudiant/nfs-public  nfs  defaults  0  0
+localhost:/nfs/etudiant/perso   /home/etudiant/nfs-perso   nfs  defaults  0  0
+ 
+# To test without rebooting:
+# sudo mount /home/etudiant/nfs-public
+# sudo mount /home/etudiant/nfs-perso
